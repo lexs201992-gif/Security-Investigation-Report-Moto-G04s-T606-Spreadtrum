@@ -97,7 +97,14 @@ Hardware: Unisoc T606, ODM Longcheer
 Disclaimer: This research is for defensive purposes to protect LATAM users. No exploit code is published. Submit to AttackerKB and Rapid7 to flag these devices as high-risk.
 
 Contact: Open an Issue in this repo for collaboration.
+https://github.com/rapid7/attackerkb/issues/79
 
+https://github.com/rapid7/attackerkb/issues/78
+
+
+https://github.com/rapid7/attackerkb/issues/77
+
+https://github.com/rapid7/attackerkb/issues/76
 
 
 
