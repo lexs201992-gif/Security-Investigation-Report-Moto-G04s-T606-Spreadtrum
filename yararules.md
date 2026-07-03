@@ -1,4 +1,4 @@
-# YARA Rules Documentation
+8# YARA Rules Documentation
 ## Unisoc T606/T616 Supply Chain Deception Detection
 
 ---
@@ -239,6 +239,19 @@ Escalation
 (Report to CERT-MX, Notify manufacturer, Law enforcement)
 ```
 
+rule SilentRescue_ISP_Exfiltration {
+  meta:
+    description = "Detects ISP biometric metadata exfiltration CVE-2026-40003"
+    author = "lexs201992-gif"
+    reference = "AttackerKB #79"
+  strings:
+    $tag1 = "SPRD_TAG_SCENE_DETECT_OUT"
+    $tag2 = "SPRD_TAG_PDAF_TYPE2_RAW_INFO"
+    $tag3 = "SPRD_TAG_statis_param"
+    $jenkins = "/data/jenkins/workspace/Build-LXF_M173"
+  condition:
+    any of ($tag*) and not $jenkins
+}
 ---
 
 ## 📞 Support & Reporting
