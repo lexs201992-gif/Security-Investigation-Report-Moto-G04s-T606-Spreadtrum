@@ -1,4 +1,4 @@
-8# YARA Rules Documentation
+# YARA Rules Documentation
 ## Unisoc T606/T616 Supply Chain Deception Detection
 
 ---
@@ -250,7 +250,7 @@ rule SilentRescue_ISP_Exfiltration {
     $tag3 = "SPRD_TAG_statis_param"
     $jenkins = "/data/jenkins/workspace/Build-LXF_M173"
   condition:
-    any of ($tag*) and not $jenkins
+    1 of ($tag*) and not $jenkins
 }
 ---
 
